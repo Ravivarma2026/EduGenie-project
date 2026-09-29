@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduGenie | Gemini Powered Learning Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}" />
+</head>
+<body>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <main class="container">
+    <header class="hero">
+      <div class="logo">&#127891;</div>
+      <h1>Edu<span>Genie</span></h1>
+      <p class="tagline">Your AI learning companion &mdash; ask, explain, quiz, summarize and plan.</p>
+      <span class="badge">Powered by Google Gemini &middot; {{ model }}</span>
+    </header>
+
+    <section class="card">
+      <form id="edu-form" autocomplete="off">
+        <label for="task">Choose a task</label>
+        <select id="task">
+          <option value="qa">&#10067; Ask a Question (Q&amp;A)</option>
+          <option value="explain">&#128161; Explain a Concept</option>
+          <option value="quiz">&#129514; Generate Quiz</option>
+          <option value="summarize">&#128221; Summarize Text</option>
+          <option value="recommend">&#128640; Recommend Learning Path</option>
+        </select>
+
+        <label for="user-input" id="input-label">Your question</label>
+        <textarea id="user-input" rows="6" placeholder="Which is the largest ocean?"></textarea>
+
+        <div class="examples" id="examples"></div>
+
+        <button type="submit" id="submit-btn"><span id="btn-text">Submit</span><span class="spinner" id="spinner"></span></button>
+      </form>
+    </section>
+
+    <section class="card result hidden" id="result-card" aria-live="polite">
+      <h2 id="result-title">Result</h2>
+      <div id="result"></div>
+    </section>
+
+    <footer>EduGenie &middot; FastAPI + Gemini &middot; Built for learners</footer>
+  </main>
+
+  <script src="{{ url_for('static', path='app.js') }}"></script>
+</body>
+</html>

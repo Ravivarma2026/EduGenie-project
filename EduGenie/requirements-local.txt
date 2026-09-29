@@ -1,0 +1,6 @@
+# OPTIONAL: local LaMini-Flan-T5-783M model for the "Explain" module.
+# Large download (~3 GB on first run). Without it, Explain automatically uses Gemini.
+transformers>=4.40.0
+torch>=2.2.0
+sentencepiece>=0.2.0
+accelerate>=0.29.0
