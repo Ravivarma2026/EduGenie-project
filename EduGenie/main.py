@@ -101,3 +101,4 @@ async def learning_api(payload: TopicRequest):
     if not topic:
         return error_response("Please provide a topic.", 400)
     return {"topic": topic, "recommendations": get_learning_recommendations(topic)}
+#activate 
