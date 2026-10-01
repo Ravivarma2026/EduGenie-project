@@ -103,3 +103,4 @@ async def learning_api(payload: TopicRequest):
     return {"topic": topic, "recommendations": get_learning_recommendations(topic)}
 #activate 
 #changed
+#finished
