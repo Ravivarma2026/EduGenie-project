@@ -20,6 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent
 app = FastAPI(title="EduGenie", description="Gemini powered learning assistant", version="1.0.0")
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
+#commited 
 
 
 class TopicRequest(BaseModel):
